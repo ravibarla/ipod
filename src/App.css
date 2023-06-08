@@ -10,7 +10,7 @@
   height: 100%;
   width: 60%;
   background-color: greenyellow;
-  padding: 0%;
+  padding: 0% 2%;
 }
 .menu-div div:hover{
   background-color: red;
