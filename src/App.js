@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Menu from "./Menu";
+import Control from "./Control";
+import React from "react"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  resetDiv=()=>{
+    const parentElement=document.getElementsByClassName("menu-div")
+    parentElement[0].remove()
+  }
+  addToDisplay=(selectedDiv)=>{
+    const parentElement=document.getElementById("head")
+    const newElement=document.createElement("div")
+    newElement.innerHTML=`<div>${selectedDiv}</div>`
+    parentElement.append(newElement)
+  }
+  handleDivSelection=(selectedDiv)=>{
+    console.log(selectedDiv)
+    this.resetDiv()
+    this.addToDisplay(selectedDiv)
+  }
+  render(){
+    return (
+      <div className="App">
+        <Menu handleDivSelection={this.handleDivSelection}/>
+        <Control />
+      </div>
+    );
+  }
 }
 
 export default App;

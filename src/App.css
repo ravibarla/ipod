@@ -1,5 +1,48 @@
 .App {
   text-align: center;
+  border: 2px solid black;
+  height: 600px;
+  width: 500px;
+  margin: 2% 40%;
+}
+
+.menu-div{
+  height: 100%;
+  width: 60%;
+  background-color: greenyellow;
+  padding: 0%;
+}
+.menu-div div:hover{
+  background-color: red;
+  
+}
+.menu-div div {
+  list-style: none;
+  text-align: left;
+}
+
+ 
+.control-div{
+  height: 55%;
+  width: 100%;
+  padding-top: 2%;
+}
+
+.circle-menu{
+  height: 250px;
+  width: 250px;
+  background-color: #e49d9d;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.circle-select{
+  height: 50px;
+  width: 50px;
+  background-color: #d61616;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 35%;
 }
 
 .App-logo {
@@ -36,3 +79,5 @@
     transform: rotate(360deg);
   }
 }
+
+
